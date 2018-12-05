@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageName</key>
+		<string>image1</string>
+		<key>description</key>
+		<string>Mountain Waterfall</string>
+		<key>photographer</key>
+		<string>Will Stewart</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>image2</string>
+		<key>description</key>
+		<string>Mainboard Closeup</string>
+		<key>photographer</key>
+		<string>Fancevrave</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>image3</string>
+		<key>description</key>
+		<string>Delicous Eggs</string>
+		<key>photographer</key>
+		<string>Brooke Lark</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>image4</string>
+		<key>description</key>
+		<string>A Colorful Walk</string>
+		<key>photographer</key>
+		<string>Efe Kurnaz</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>image5</string>
+		<key>description</key>
+		<string>Love is in the Air</string>
+		<key>photographer</key>
+		<string>Tyler Nix</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>image6</string>
+		<key>description</key>
+		<string>Lonley Ship</string>
+		<key>photographer</key>
+		<string>Red Hat Factory</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>image7</string>
+		<key>description</key>
+		<string>The Final Frontier</string>
+		<key>photographer</key>
+		<string>Adrian Pelletier</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>image8</string>
+		<key>description</key>
+		<string>Up in the Trees</string>
+		<key>photographer</key>
+		<string>Casey Horner</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>image9</string>
+		<key>description</key>
+		<string>Road to Freedom</string>
+		<key>photographer</key>
+		<string>Thomas Griesbeck</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>image10</string>
+		<key>description</key>
+		<string>Happy Geometry</string>
+		<key>photographer</key>
+		<string>Beasty</string>
+	</dict>
+</array>
+</plist>

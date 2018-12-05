@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>quote</key>
+		<string>The best preperation for tomorrow is doing your best today.</string>
+		<key>author</key>
+		<string>H. Jackson Brown, Jr.</string>
+	</dict>
+	<dict>
+		<key>quote</key>
+		<string>My best friend is the one who brings out the best in me.</string>
+		<key>author</key>
+		<string>Henry Ford</string>
+	</dict>
+	<dict>
+		<key>quote</key>
+		<string>Change your thoughts and you change your world.</string>
+		<key>author</key>
+		<string>Norman Vincent Peale</string>
+	</dict>
+	<dict>
+		<key>quote</key>
+		<string>You will never win if you never begin.</string>
+		<key>author</key>
+		<string>Helen Rowland</string>
+	</dict>
+	<dict>
+		<key>quote</key>
+		<string>It does not matter how slowly you go as long as you do not stop.</string>
+		<key>author</key>
+		<string>Confucius</string>
+	</dict>
+	<dict>
+		<key>quote</key>
+		<string>Ever tried. Ever failed. No matter. Try again. Fail again. Fail better.</string>
+		<key>author</key>
+		<string>Samuel Becket</string>
+	</dict>
+	<dict>
+		<key>quote</key>
+		<string>The way to get started is to quit talking and begin doing.</string>
+		<key>author</key>
+		<string>Walt Disney</string>
+	</dict>
+	<dict>
+		<key>quote</key>
+		<string>If you fell down yesterday, stand up today.</string>
+		<key>author</key>
+		<string>H. G. Wells</string>
+	</dict>
+	<dict>
+		<key>quote</key>
+		<string>It is never too late to be what you might have been.</string>
+		<key>author</key>
+		<string>George Eliot</string>
+	</dict>
+	<dict>
+		<key>quote</key>
+		<string>Innovation distinguishes between a leader and a follower</string>
+		<key>author</key>
+		<string>Steve Jobs</string>
+	</dict>
+</array>
+</plist>

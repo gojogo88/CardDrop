@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>categoryName</key>
+		<string>Exploration</string>
+		<key>categoryImageName</key>
+		<string>category1</string>
+	</dict>
+	<dict>
+		<key>categoryName</key>
+		<string>Space</string>
+		<key>categoryImageName</key>
+		<string>category2</string>
+	</dict>
+	<dict>
+		<key>categoryName</key>
+		<string>Summer</string>
+		<key>categoryImageName</key>
+		<string>category3</string>
+	</dict>
+	<dict>
+		<key>categoryName</key>
+		<string>Mountains</string>
+		<key>categoryImageName</key>
+		<string>category4</string>
+	</dict>
+	<dict>
+		<key>categoryName</key>
+		<string>Fun</string>
+		<key>categoryImageName</key>
+		<string>category5</string>
+	</dict>
+	<dict>
+		<key>categoryName</key>
+		<string>Cool</string>
+		<key>categoryImageName</key>
+		<string>category6</string>
+	</dict>
+	<dict>
+		<key>categoryName</key>
+		<string>Technology</string>
+		<key>categoryImageName</key>
+		<string>category7</string>
+	</dict>
+	<dict>
+		<key>categoryName</key>
+		<string>Sunny</string>
+		<key>categoryImageName</key>
+		<string>category8</string>
+	</dict>
+</array>
+</plist>
