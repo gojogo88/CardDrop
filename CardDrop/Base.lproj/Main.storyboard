@@ -10,6 +10,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
         <array key="Montserrat-SemiBold.ttf">
             <string>Montserrat-SemiBold</string>
         </array>
@@ -63,28 +69,108 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="CARD DROP" id="15q-6A-nzu"/>
                     <connections>
-                        <segue destination="cwI-77-KAo" kind="show" id="HfG-X2-a8C"/>
+                        <segue destination="cwI-77-KAo" kind="show" identifier="toDetail" id="HfG-X2-a8C"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17r-yL-j4Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1990" y="-118"/>
         </scene>
-        <!--View Controller-->
+        <!--Image SelectionVC-->
         <scene sceneID="o8Q-jW-Ira">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="cwI-77-KAo" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="cwI-77-KAo" customClass="ImageSelectionVC" customModule="CardDrop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5OJ-bH-fbm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aO1-02-49y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category1" translatesAutoresizingMaskIntoConstraints="NO" id="MZO-JB-OX3">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ItU-Jk-2CA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOB-2m-qfE">
+                                                <rect key="frame" x="28" y="479" width="340" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="PyR-eg-MLC"/>
+                                                    <constraint firstAttribute="height" constant="35" id="RhW-aj-Vpb"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="lfZ-dw-ed8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQG-Nj-Vba">
+                                                <rect key="frame" x="28" y="518" width="340" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="DPg-20-tab"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="340" id="EJT-Zg-Hqr"/>
+                                                    <constraint firstAttribute="height" constant="44" id="Mhu-1q-7s2"/>
+                                                </constraints>
+                                                <string key="text">Swipe to choose
+Tap to connect</string>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50468214897260277" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="hOB-2m-qfE" firstAttribute="leading" secondItem="ItU-Jk-2CA" secondAttribute="leading" constant="28" id="3zw-lY-qTc"/>
+                                            <constraint firstItem="iQG-Nj-Vba" firstAttribute="top" secondItem="hOB-2m-qfE" secondAttribute="bottom" constant="4" id="5np-f4-SnU"/>
+                                            <constraint firstItem="iQG-Nj-Vba" firstAttribute="leading" secondItem="ItU-Jk-2CA" secondAttribute="leading" constant="28" id="Q7g-nc-abO"/>
+                                            <constraint firstItem="hOB-2m-qfE" firstAttribute="top" secondItem="ItU-Jk-2CA" secondAttribute="top" constant="479" id="ldU-sE-CKc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MZO-JB-OX3" secondAttribute="bottom" id="0VB-Z9-TVS"/>
+                                    <constraint firstItem="ItU-Jk-2CA" firstAttribute="top" secondItem="aO1-02-49y" secondAttribute="top" id="Gdz-ZD-KEV"/>
+                                    <constraint firstItem="MZO-JB-OX3" firstAttribute="height" secondItem="aO1-02-49y" secondAttribute="height" id="Gh3-R5-Kfi"/>
+                                    <constraint firstItem="MZO-JB-OX3" firstAttribute="leading" secondItem="aO1-02-49y" secondAttribute="leading" id="JGJ-F2-U1k"/>
+                                    <constraint firstItem="MZO-JB-OX3" firstAttribute="width" secondItem="aO1-02-49y" secondAttribute="width" id="dOi-16-Zea"/>
+                                    <constraint firstAttribute="trailing" secondItem="MZO-JB-OX3" secondAttribute="trailing" id="hOq-uy-CpG"/>
+                                    <constraint firstItem="MZO-JB-OX3" firstAttribute="top" secondItem="aO1-02-49y" secondAttribute="top" id="kOF-W4-Ksz"/>
+                                    <constraint firstAttribute="trailing" secondItem="ItU-Jk-2CA" secondAttribute="trailing" id="lc8-6Z-Odh"/>
+                                    <constraint firstAttribute="bottom" secondItem="ItU-Jk-2CA" secondAttribute="bottom" id="nMr-91-hwB"/>
+                                    <constraint firstItem="ItU-Jk-2CA" firstAttribute="leading" secondItem="aO1-02-49y" secondAttribute="leading" id="uzC-XH-Aa8"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMS-9s-ecQ">
+                                <rect key="frame" x="28" y="72" width="26" height="26"/>
+                                <state key="normal" image="CancelButtonLight"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="cwI-77-KAo" eventType="touchUpInside" id="a3s-gN-Ghh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WMS-9s-ecQ" firstAttribute="leading" secondItem="TUP-La-fwg" secondAttribute="leading" constant="28" id="1Qn-Wk-6ef"/>
+                            <constraint firstItem="WMS-9s-ecQ" firstAttribute="top" secondItem="TUP-La-fwg" secondAttribute="top" constant="52" id="ILC-kE-cAL"/>
+                            <constraint firstItem="aO1-02-49y" firstAttribute="top" secondItem="5OJ-bH-fbm" secondAttribute="top" id="J5J-3c-Pnr"/>
+                            <constraint firstItem="aO1-02-49y" firstAttribute="trailing" secondItem="TUP-La-fwg" secondAttribute="trailing" id="NP1-ie-oRM"/>
+                            <constraint firstItem="aO1-02-49y" firstAttribute="bottom" secondItem="5OJ-bH-fbm" secondAttribute="bottom" id="mIk-ja-fl9"/>
+                            <constraint firstItem="aO1-02-49y" firstAttribute="leading" secondItem="TUP-La-fwg" secondAttribute="leading" id="p3e-K1-ZEU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TUP-La-fwg"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="backButton" destination="WMS-9s-ecQ" id="mN1-YS-iel"/>
+                        <outlet property="categoryLabel" destination="hOB-2m-qfE" id="e0o-Tm-YTZ"/>
+                        <outlet property="initialDimView" destination="ItU-Jk-2CA" id="tyc-x8-6FS"/>
+                        <outlet property="initialImageView" destination="MZO-JB-OX3" id="jeU-7J-VcB"/>
+                        <outlet property="scrollView" destination="aO1-02-49y" id="60J-OM-bHb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UEU-SZ-1sH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="-118"/>
+            <point key="canvasLocation" x="2669.5999999999999" y="-118.29085457271366"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kBv-Sn-woL">
@@ -103,15 +189,18 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="fMX-4q-0gZ" id="BNP-0M-kY6"/>
                         <segue destination="158-5C-a3B" kind="relationship" relationship="rootViewController" id="7zC-Yw-aIN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cck-qP-Ekq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="fMX-4q-0gZ" customClass="ScaleTransitioningDelegate" customModule="CardDrop" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1301.5999999999999" y="-118.29085457271366"/>
         </scene>
     </scenes>
     <resources>
+        <image name="CancelButtonLight" width="26" height="26"/>
         <image name="category1" width="959" height="1343"/>
     </resources>
 </document>

@@ -13,6 +13,8 @@ class MainCVC: UICollectionViewController {
   let categoryDataRequest = DataRequest<Category>(dataSource: "Categories")
   var categoryData = [Category]()
   
+  var selectedIndexPath: IndexPath?
+  
     override func viewDidLoad() {
         super.viewDidLoad()
       loadData()
@@ -31,6 +33,17 @@ class MainCVC: UICollectionViewController {
     }
   }
 
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "toDetail" {
+      let category = sender as! Category
+      guard let image = UIImage(named: category.categoryImageName) else { return }
+      
+      let imageSelectionVC = segue.destination as! ImageSelectionVC
+      imageSelectionVC.image = image
+      imageSelectionVC.category = category
+    }
+  }
+  
 }
 
 // MARK: UICollectionViewDataSource
@@ -63,6 +76,9 @@ extension MainCVC {
   }
   
   override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let category = categoryData[indexPath.item]
+    selectedIndexPath = indexPath
+    self.performSegue(withIdentifier: "toDetail", sender: category)
     
   }
 }
@@ -73,6 +89,15 @@ extension MainCVC: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
     return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
   }
- 
+}
 
+// MARK: - Transitioning Animation Delegate
+extension MainCVC: Scaling {
+  func scalingImageView(transition: ScaleTransitioningDelegate) -> UIImageView? {
+    if let indexPath = selectedIndexPath {
+      guard let cell = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell else { return nil }
+      return cell.backgroundImageView
+    }
+    return nil
+  }
 }
