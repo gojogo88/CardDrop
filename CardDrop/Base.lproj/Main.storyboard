@@ -222,11 +222,23 @@ your best today.</string>
                                             <action selector="shareCardBtnPressed:" destination="O7J-ET-AB5" eventType="touchUpInside" id="HHA-g2-0UG"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86i-KF-gAe">
+                                        <rect key="frame" x="28" y="52" width="26" height="26"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="CancelButtonDark">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="O7J-ET-AB5" eventType="touchUpInside" id="wvx-RM-qpj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="2CI-Vq-Ymo" firstAttribute="top" secondItem="Ey6-Ms-xrS" secondAttribute="bottom" constant="25" id="5XY-Ky-UTs"/>
+                                    <constraint firstItem="86i-KF-gAe" firstAttribute="top" secondItem="Xeg-1C-EXT" secondAttribute="top" constant="52" id="8XA-Qe-QFD"/>
                                     <constraint firstItem="2CI-Vq-Ymo" firstAttribute="leading" secondItem="Xeg-1C-EXT" secondAttribute="leading" constant="41" id="HbQ-DH-WQt"/>
+                                    <constraint firstItem="86i-KF-gAe" firstAttribute="leading" secondItem="Xeg-1C-EXT" secondAttribute="leading" constant="28" id="Idn-9O-YEt"/>
                                     <constraint firstAttribute="trailing" secondItem="2CI-Vq-Ymo" secondAttribute="trailing" constant="41" id="RHo-yl-lJf"/>
                                     <constraint firstItem="2CI-Vq-Ymo" firstAttribute="centerY" secondItem="Xeg-1C-EXT" secondAttribute="centerY" id="X8h-Do-ZTM"/>
                                     <constraint firstItem="JPZ-D9-GFx" firstAttribute="centerX" secondItem="Xeg-1C-EXT" secondAttribute="centerX" id="nUC-Zq-vI8"/>
@@ -234,26 +246,14 @@ your best today.</string>
                                     <constraint firstItem="Ey6-Ms-xrS" firstAttribute="centerX" secondItem="Xeg-1C-EXT" secondAttribute="centerX" id="yav-YL-bif"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86i-KF-gAe">
-                                <rect key="frame" x="28" y="72" width="26" height="26"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="CancelButtonDark">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="backBtnPressed:" destination="O7J-ET-AB5" eventType="touchUpInside" id="wvx-RM-qpj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Xeg-1C-EXT" firstAttribute="bottom" secondItem="LF7-5n-tv1" secondAttribute="bottom" id="0WC-KV-ouv"/>
                             <constraint firstItem="yGx-Np-91h" firstAttribute="top" secondItem="LF7-5n-tv1" secondAttribute="top" id="COU-fJ-gVj"/>
                             <constraint firstItem="yGx-Np-91h" firstAttribute="trailing" secondItem="Azl-q5-2Oj" secondAttribute="trailing" id="FdN-O0-ycU"/>
-                            <constraint firstItem="86i-KF-gAe" firstAttribute="top" secondItem="Azl-q5-2Oj" secondAttribute="top" constant="52" id="R5A-a5-D7Z"/>
                             <constraint firstItem="Xeg-1C-EXT" firstAttribute="leading" secondItem="Azl-q5-2Oj" secondAttribute="leading" id="agF-Pg-uPO"/>
                             <constraint firstItem="Xeg-1C-EXT" firstAttribute="trailing" secondItem="Azl-q5-2Oj" secondAttribute="trailing" id="q3j-nn-EGs"/>
-                            <constraint firstItem="86i-KF-gAe" firstAttribute="leading" secondItem="Azl-q5-2Oj" secondAttribute="leading" constant="28" id="qYY-5X-FKF"/>
                             <constraint firstItem="Xeg-1C-EXT" firstAttribute="top" secondItem="LF7-5n-tv1" secondAttribute="top" id="tJX-ct-mgl"/>
                             <constraint firstItem="yGx-Np-91h" firstAttribute="leading" secondItem="Azl-q5-2Oj" secondAttribute="leading" id="vgs-fl-iu6"/>
                             <constraint firstItem="yGx-Np-91h" firstAttribute="bottom" secondItem="LF7-5n-tv1" secondAttribute="bottom" id="wVT-4g-kNj"/>

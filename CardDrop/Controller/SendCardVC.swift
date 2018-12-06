@@ -47,6 +47,11 @@ class SendCardVC: UIViewController {
   }
   
   @IBAction func shareCardBtnPressed(_ sender: UIButton) {
+    _ = textContainerView.subviews.filter({$0 is UIButton}).map({$0.isHidden = true})
+    let image = self.view.screenshot()
+    _ = textContainerView.subviews.filter({$0 is UIButton}).map({$0.isHidden = false})
+    let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+    self.present(activityVC, animated: true)
   }
   
 }
