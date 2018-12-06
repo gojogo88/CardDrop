@@ -16,6 +16,8 @@ class ImageSelectionVC: UIViewController {
   let imageDataRequest = DataRequest<Image>(dataSource: "Images")
   var imageData = [Image]()
   
+  var currentScrollViewPage = 0
+  
   @IBOutlet var initialImageView: UIImageView!
   @IBOutlet var categoryLabel: UILabel!
   @IBOutlet var scrollView: UIScrollView!
@@ -61,6 +63,7 @@ class ImageSelectionVC: UIViewController {
       self.backButton.alpha = 1
     }
     
+    scrollView.delegate = self
     scrollView.contentSize.width = self.scrollView.frame.width * CGFloat(imageData.count + 1)
     
     for (i, image) in imageData.enumerated() {
@@ -76,6 +79,17 @@ class ImageSelectionVC: UIViewController {
       scrollView.addSubview(photoView)
     }
     
+    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ImageSelectionVC.didPressOnScrollView(recognizer:)))
+    scrollView.addGestureRecognizer(tapGestureRecognizer)
+  }
+  
+  @objc func didPressOnScrollView(recognizer: UITapGestureRecognizer) {
+    if currentScrollViewPage != 0 {
+      self.performSegue(withIdentifier: "toSendCard", sender: self)
+    } else {
+      scrollView.setContentOffset(CGPoint(x: self.view.frame.width, y: 0), animated: true)
+      currentScrollViewPage = 1
+    }
   }
   
   @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -90,10 +104,25 @@ class ImageSelectionVC: UIViewController {
       })
     }
   }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "toSendCard" {
+      guard let sendCardVC = segue.destination as? SendCardVC else { return }
+      guard let imageToSend = UIImage(named: imageData[currentScrollViewPage - 1].imageName) else { return }
+      sendCardVC.backgroundImage = imageToSend
+      sendCardVC.modalTransitionStyle = .crossDissolve
+    }
+  }
 }
 
 extension ImageSelectionVC: Scaling {
   func scalingImageView(transition: ScaleTransitioningDelegate) -> UIImageView? {
     return initialImageView
+  }
+}
+
+extension ImageSelectionVC: UIScrollViewDelegate {
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    currentScrollViewPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
   }
 }

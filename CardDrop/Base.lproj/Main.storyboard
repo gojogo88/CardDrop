@@ -166,11 +166,110 @@ Tap to connect</string>
                         <outlet property="initialDimView" destination="ItU-Jk-2CA" id="tyc-x8-6FS"/>
                         <outlet property="initialImageView" destination="MZO-JB-OX3" id="jeU-7J-VcB"/>
                         <outlet property="scrollView" destination="aO1-02-49y" id="60J-OM-bHb"/>
+                        <segue destination="O7J-ET-AB5" kind="presentation" identifier="toSendCard" modalTransitionStyle="crossDissolve" id="1rd-Vc-Ot1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UEU-SZ-1sH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2669.5999999999999" y="-118.29085457271366"/>
+        </scene>
+        <!--Send CardVC-->
+        <scene sceneID="oNV-iG-odn">
+            <objects>
+                <viewController id="O7J-ET-AB5" customClass="SendCardVC" customModule="CardDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LF7-5n-tv1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yGx-Np-91h">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xeg-1C-EXT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CI-Vq-Ymo">
+                                        <rect key="frame" x="41" y="286" width="293" height="95.5"/>
+                                        <string key="text">The best preperation
+for tomorrow is doing 
+your best today.</string>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- H. Jackson Brown, Jr." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPZ-D9-GFx">
+                                        <rect key="frame" x="76.5" y="401" width="222.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey6-Ms-xrS">
+                                        <rect key="frame" x="103.5" y="208" width="168" height="53"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="bsT-c3-bZ8"/>
+                                            <constraint firstAttribute="height" constant="53" id="gkN-I4-t5n"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
+                                        <state key="normal" title="Share Card">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="shareCardBtnPressed:" destination="O7J-ET-AB5" eventType="touchUpInside" id="HHA-g2-0UG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2CI-Vq-Ymo" firstAttribute="top" secondItem="Ey6-Ms-xrS" secondAttribute="bottom" constant="25" id="5XY-Ky-UTs"/>
+                                    <constraint firstItem="2CI-Vq-Ymo" firstAttribute="leading" secondItem="Xeg-1C-EXT" secondAttribute="leading" constant="41" id="HbQ-DH-WQt"/>
+                                    <constraint firstAttribute="trailing" secondItem="2CI-Vq-Ymo" secondAttribute="trailing" constant="41" id="RHo-yl-lJf"/>
+                                    <constraint firstItem="2CI-Vq-Ymo" firstAttribute="centerY" secondItem="Xeg-1C-EXT" secondAttribute="centerY" id="X8h-Do-ZTM"/>
+                                    <constraint firstItem="JPZ-D9-GFx" firstAttribute="centerX" secondItem="Xeg-1C-EXT" secondAttribute="centerX" id="nUC-Zq-vI8"/>
+                                    <constraint firstItem="JPZ-D9-GFx" firstAttribute="top" secondItem="2CI-Vq-Ymo" secondAttribute="bottom" constant="19.5" id="u8e-le-CMs"/>
+                                    <constraint firstItem="Ey6-Ms-xrS" firstAttribute="centerX" secondItem="Xeg-1C-EXT" secondAttribute="centerX" id="yav-YL-bif"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86i-KF-gAe">
+                                <rect key="frame" x="28" y="72" width="26" height="26"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="CancelButtonDark">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="O7J-ET-AB5" eventType="touchUpInside" id="wvx-RM-qpj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xeg-1C-EXT" firstAttribute="bottom" secondItem="LF7-5n-tv1" secondAttribute="bottom" id="0WC-KV-ouv"/>
+                            <constraint firstItem="yGx-Np-91h" firstAttribute="top" secondItem="LF7-5n-tv1" secondAttribute="top" id="COU-fJ-gVj"/>
+                            <constraint firstItem="yGx-Np-91h" firstAttribute="trailing" secondItem="Azl-q5-2Oj" secondAttribute="trailing" id="FdN-O0-ycU"/>
+                            <constraint firstItem="86i-KF-gAe" firstAttribute="top" secondItem="Azl-q5-2Oj" secondAttribute="top" constant="52" id="R5A-a5-D7Z"/>
+                            <constraint firstItem="Xeg-1C-EXT" firstAttribute="leading" secondItem="Azl-q5-2Oj" secondAttribute="leading" id="agF-Pg-uPO"/>
+                            <constraint firstItem="Xeg-1C-EXT" firstAttribute="trailing" secondItem="Azl-q5-2Oj" secondAttribute="trailing" id="q3j-nn-EGs"/>
+                            <constraint firstItem="86i-KF-gAe" firstAttribute="leading" secondItem="Azl-q5-2Oj" secondAttribute="leading" constant="28" id="qYY-5X-FKF"/>
+                            <constraint firstItem="Xeg-1C-EXT" firstAttribute="top" secondItem="LF7-5n-tv1" secondAttribute="top" id="tJX-ct-mgl"/>
+                            <constraint firstItem="yGx-Np-91h" firstAttribute="leading" secondItem="Azl-q5-2Oj" secondAttribute="leading" id="vgs-fl-iu6"/>
+                            <constraint firstItem="yGx-Np-91h" firstAttribute="bottom" secondItem="LF7-5n-tv1" secondAttribute="bottom" id="wVT-4g-kNj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Azl-q5-2Oj"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="JPZ-D9-GFx" id="vaZ-aP-EXZ"/>
+                        <outlet property="backgroundImageView" destination="yGx-Np-91h" id="YIt-EM-cu4"/>
+                        <outlet property="quoteLabel" destination="2CI-Vq-Ymo" id="Lb3-Ty-YtE"/>
+                        <outlet property="textContainerView" destination="Xeg-1C-EXT" id="3Pq-Ta-43p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hx6-9q-Kwx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3403" y="-122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kBv-Sn-woL">
@@ -200,6 +299,7 @@ Tap to connect</string>
         </scene>
     </scenes>
     <resources>
+        <image name="CancelButtonDark" width="26" height="26"/>
         <image name="CancelButtonLight" width="26" height="26"/>
         <image name="category1" width="959" height="1343"/>
     </resources>

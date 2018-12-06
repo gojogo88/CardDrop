@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6C0AC35A21B8D3FC00602DB8 /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0AC35921B8D3FC00602DB8 /* PhotoView.xib */; };
 		6C0AC35C21B8D5F500602DB8 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0AC35B21B8D5F500602DB8 /* PhotoView.swift */; };
+		6C0AC35E21B9081500602DB8 /* SendCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0AC35D21B9081500602DB8 /* SendCardVC.swift */; };
 		6CE5409121B77EC90086FE2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE5409021B77EC90086FE2B /* AppDelegate.swift */; };
 		6CE5409621B77EC90086FE2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE5409421B77EC90086FE2B /* Main.storyboard */; };
 		6CE5409821B77ECA0086FE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CE5409721B77ECA0086FE2B /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		6C0AC35921B8D3FC00602DB8 /* PhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
 		6C0AC35B21B8D5F500602DB8 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		6C0AC35D21B9081500602DB8 /* SendCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCardVC.swift; sourceTree = "<group>"; };
 		6CE5408D21B77EC90086FE2B /* CardDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE5409021B77EC90086FE2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CE5409521B77EC90086FE2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				6CE540B221B77F0A0086FE2B /* MainCVC.swift */,
 				6CE540C321B7BB030086FE2B /* ImageSelectionVC.swift */,
+				6C0AC35D21B9081500602DB8 /* SendCardVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C0AC35E21B9081500602DB8 /* SendCardVC.swift in Sources */,
 				6CE540AC21B77EDF0086FE2B /* Quote.swift in Sources */,
 				6CE540B321B77F0A0086FE2B /* MainCVC.swift in Sources */,
 				6CE540AD21B77EDF0086FE2B /* Category.swift in Sources */,
